@@ -64,7 +64,7 @@ script = ExtResource("1_5bi41")
 [node name="Dice shape" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_5nn8p")
 
-[node name="Dice sides" type="AnimatedSprite2D" parent="Area2D/Dice shape"]
+[node name="Dice sides" type="AnimatedSprite2D" parent="Area2D"]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_5k4jm")
 frame = 3

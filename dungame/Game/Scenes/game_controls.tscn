@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://btbeot5u2wtbd"]
+[gd_scene load_steps=2 format=3 uid="uid://btbeot5u2wtbd"]
 
 [ext_resource type="Script" path="res://Game/Scripts/game_controls.gd" id="1_1pir4"]
-[ext_resource type="PackedScene" uid="uid://cj83i0g8e624i" path="res://Game/Scenes/dice.tscn" id="2_byo2x"]
 
 [node name="Game Controls" type="Node2D"]
 position = Vector2(156, 90)
 script = ExtResource("1_1pir4")
-
-[node name="Dice" parent="." instance=ExtResource("2_byo2x")]
 
 [connection signal="next_turn" from="." to="." method="_on_next_turn"]
