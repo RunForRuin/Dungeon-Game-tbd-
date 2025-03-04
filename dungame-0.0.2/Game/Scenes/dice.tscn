@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://b6jqiux23iepd"]
+
+[ext_resource type="Script" uid="uid://0d4hyymv17e2" path="res://Game/Scripts/Specific/dice.gd" id="1_lofev"]
+[ext_resource type="Texture2D" uid="uid://ddnpls0t4q1fi" path="res://Assets/Graphics/Dice.png" id="2_s6vtb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t8pc"]
+atlas = ExtResource("2_s6vtb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mixim"]
+atlas = ExtResource("2_s6vtb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03k8s"]
+atlas = ExtResource("2_s6vtb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h364"]
+atlas = ExtResource("2_s6vtb")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh4qj"]
+atlas = ExtResource("2_s6vtb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgqua"]
+atlas = ExtResource("2_s6vtb")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7wx6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t8pc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mixim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03k8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h364")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jh4qj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgqua")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufai"]
+size = Vector2(32, 32)
+
+[node name="Dice" type="Node2D" groups=["Dice", "dice"]]
+script = ExtResource("1_lofev")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_w7wx6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7ufai")

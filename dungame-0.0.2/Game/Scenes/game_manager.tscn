@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4n6s3q7sfw1g"]
+
+[ext_resource type="Script" uid="uid://dnjbma1usk7qm" path="res://Game/Scripts/Specific/game_manager.gd" id="1_4y8bj"]
+
+[node name="Game Manager" type="Node2D"]
+scale = Vector2(1.01299, 0.985714)
+script = ExtResource("1_4y8bj")

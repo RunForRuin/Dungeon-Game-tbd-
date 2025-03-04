@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsa3dip54ixpo"]
+
+[ext_resource type="Script" uid="uid://bsnnnlmlffvap" path="res://Game/Scripts/Specific/dice_manager.gd" id="1_k1pdv"]
+
+[node name="Dice Manager" type="Node2D"]
+script = ExtResource("1_k1pdv")
